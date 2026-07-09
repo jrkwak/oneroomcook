@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" role="img" aria-label="원룸쿡 로고 마크">
+  <rect x="6" y="10" width="52" height="46" rx="6" stroke="#2C2420" stroke-width="3.5"/>
+  <rect x="42" y="18" width="9" height="9" rx="1.5" stroke="#2C2420" stroke-width="2.5"/>
+  <circle cx="26" cy="38" r="11.5" stroke="#C05A3A" stroke-width="3.5"/>
+  <circle cx="26" cy="38" r="5" fill="#D9A13F"/>
+  <path d="M23 20c-1.5 1.8 1.5 3 0 4.8M29 20c-1.5 1.8 1.5 3 0 4.8" stroke="#7C8B6C" stroke-width="2.2" stroke-linecap="round"/>
+</svg>

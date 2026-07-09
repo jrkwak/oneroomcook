@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="원팬 크림파스타 일러스트">
+  <rect width="400" height="300" fill="#F5EDDA"/>
+  <circle cx="352" cy="46" r="60" fill="#C05A3A" opacity=".18"/>
+  <circle cx="40" cy="262" r="70" fill="#D9A13F" opacity=".12"/>
+  <g transform="translate(0,14)"><ellipse cx="200" cy="185" rx="120" ry="34" fill="#FFFDF8" stroke="#D9A13F" stroke-width="5"/><path d="M140 178c20-22 44-30 62-24s26 20 52 16" fill="none" stroke="#C05A3A" stroke-width="14" stroke-linecap="round"/><circle cx="150" cy="170" r="7" fill="#7C8B6C"/><circle cx="252" cy="172" r="6" fill="#7C8B6C"/><path d="M185 138c-8 -12 8 -18 0 -32M215 138c-8 -12 8 -18 0 -32" fill="none" stroke="#7C8B6C" stroke-width="6" stroke-linecap="round" opacity=".75"/></g>
+  <rect x="20" y="252" width="86" height="26" rx="13" fill="#D9A13F"/>
+  <text x="63" y="270" font-family="sans-serif" font-size="13" font-weight="700" fill="#FFFDF8" text-anchor="middle">양식</text>
+</svg>
