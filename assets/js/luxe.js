@@ -180,3 +180,39 @@
     });
   }
 })();
+
+/* 8) 모바일 오버레이 메뉴 ----------------------------------------------------- */
+(function () {
+  var burger = document.querySelector('.lx-burger');
+  var menu = document.querySelector('.lx-menu');
+  if (!burger || !menu) return;
+  burger.addEventListener('click', function () {
+    var open = menu.classList.toggle('open');
+    document.body.classList.toggle('menu-open', open);
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  menu.addEventListener('click', function (e) { if (e.target.tagName === 'A') burger.click(); });
+})();
+
+/* 9) 레시피 카테고리 필터 (아카이브) ------------------------------------------ */
+(function () {
+  var bar = document.querySelector('.filter-bar');
+  if (!bar) return;
+  var cards = Array.prototype.slice.call(document.querySelectorAll('.recipe-card'));
+  var countEl = document.querySelector('.archive-count b');
+  bar.addEventListener('click', function (e) {
+    var btn = e.target.closest('button[data-filter]');
+    if (!btn) return;
+    bar.querySelectorAll('button').forEach(function (b) {
+      b.classList.remove('active'); b.setAttribute('aria-pressed', 'false');
+    });
+    btn.classList.add('active'); btn.setAttribute('aria-pressed', 'true');
+    var cat = btn.dataset.filter, visible = 0;
+    cards.forEach(function (card) {
+      var show = cat === 'all' || (card.dataset.categories || '').split(' ').indexOf(cat) !== -1;
+      card.classList.toggle('hidden', !show);
+      if (show) visible++;
+    });
+    if (countEl) countEl.textContent = visible;
+  });
+})();

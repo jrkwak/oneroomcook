@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>스토리 — 원룸쿡이 시작된 이야기 | ONEROOMCOOK</title>
+  <title>Story — 원룸쿡이 시작된 이야기 | ONEROOMCOOK</title>
   <meta name="description" content="첫 자취방의 주방은 세탁기 옆 한 뼘이었습니다. 좁은 원룸에서 요리를 포기하지 않기로 한 기록, 원룸쿡의 시작.">
   <link rel="canonical" href="https://jrkwak.github.io/oneroomcook/about.html">
   <meta property="og:type" content="article">
@@ -11,124 +11,80 @@
   <meta property="og:title" content="원룸쿡이 시작된 이야기">
   <meta property="og:description" content="좁은 원룸에서 요리를 포기하지 않기로 한 기록.">
   <meta property="og:url" content="https://jrkwak.github.io/oneroomcook/about.html">
+  <meta name="theme-color" content="#0B0A09">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Noto+Serif+KR:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/luxe.css">
 </head>
-<body>
-  <a class="skip-link" href="#main">본문 바로가기</a>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="index.html">
-        <img src="assets/img/logo-mark.svg" alt="" width="34" height="34">
-        <span class="brand-name">원룸<em>쿡</em></span>
-      </a>
-      <button class="nav-toggle" aria-expanded="false" aria-label="메뉴 열기"><span></span><span></span><span></span></button>
-      <nav class="nav" aria-label="주 메뉴">
-        <a href="index.html">홈</a>
-        <a href="recipes/index.html">레시피</a>
-        <a href="about.html" aria-current="page">스토리</a>
-        <a href="partnership.html">파트너십</a>
-        <a class="btn" href="contact.html">협업 문의</a>
-      </nav>
-    </div>
+<body class="luxe">
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"></div>
+  <header class="lx-header solid">
+    <a class="lx-logo" href="index.html">ONEROOMCOOK</a>
+    <nav class="lx-nav" aria-label="주 메뉴">
+      <a href="recipes/index.html">Recipes</a>
+      <a href="about.html">Story</a>
+      <a href="partnership.html">Partnership</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="lx-burger" aria-label="메뉴 열기" aria-expanded="false"><span></span><span></span><span></span></button>
   </header>
-
-  <main id="main">
-    <section class="recipe-hero" style="padding-bottom:0;">
-      <div class="narrow">
-        <p class="kicker">Our Story</p>
-        <h1>세탁기 옆 한 뼘에서<br>시작된 이야기</h1>
-        <p class="lede">원룸쿡은 대단한 요리 계정이 아니라, 포기하지 않기로 한 기록입니다.</p>
-      </div>
-    </section>
-
-    <section>
-      <div class="narrow" style="font-size:1.05rem;">
-        <p>첫 자취방을 계약하던 날, 부동산 사장님은 주방을 이렇게 소개했습니다. <b>“여기 싱크대 있고요, 인덕션 한 구 있고요. 요즘 혼자 살면 어차피 다 시켜 먹어요.”</b></p>
-        <p>그 말이 이상하게 오래 남았습니다. ‘어차피’라는 말이요. 어차피 좁으니까, 어차피 혼자니까, 어차피 해봤자니까. 자취를 시작하면 요리를 포기하는 게 기본값이라는 그 전제가요.</p>
+  <div class="lx-menu" aria-label="모바일 메뉴">
+    <a href="index.html">Home</a>
+    <a href="recipes/index.html">Recipes</a>
+    <a href="about.html">Story</a>
+    <a href="partnership.html">Partnership</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <main>
+    <div class="lx-page-hero">
+      <p class="lx-label">Our Story</p>
+      <h1>세탁기 옆 한 뼘에서<br>시작된 <span class="gold">이야기</span></h1>
+      <p class="lx-p">원룸쿡은 대단한 요리 계정이 아니라, 포기하지 않기로 한 기록입니다.</p>
+    </div>
+    <div class="lx-section" style="padding-top:1rem;">
+      <div class="lx-article">
+        <p class="lead">첫 자취방을 계약하던 날, 부동산 사장님은 주방을 이렇게 소개했습니다. "여기 싱크대 있고요, 인덕션 한 구 있고요. 요즘 혼자 살면 어차피 다 시켜 먹어요."</p>
+        <p>그 말이 이상하게 오래 남았습니다. '어차피'라는 말이요. 어차피 좁으니까, 어차피 혼자니까, 어차피 해봤자니까. 자취를 시작하면 요리를 포기하는 게 기본값이라는 그 전제가요.</p>
         <p>처음 몇 달은 정말 그렇게 살았습니다. 배달 앱의 주문 내역이 일기장이 되어가던 어느 날, 문득 셈을 해봤습니다. 한 달 배달비로 나간 돈이면 좋은 프라이팬과 미니 오븐을 사고도 남는다는 걸요. 그날 저녁, 세탁기 옆 60cm 조리대에서 계란밥 하나를 만들었습니다. 버터를 넣는 타이밍을 세 번쯤 틀리고 나서야 완성된 그 그릇이, 원룸쿡의 첫 게시물이 됐습니다.</p>
-        <p>그 뒤로 규칙을 하나 세웠습니다. <b>“이 방에서 안 되는 요리는 올리지 않는다.”</b> 화구가 두 개 필요한 레시피, 오븐이 커야 하는 베이킹, 조리대가 넓어야 하는 손질은 아무리 근사해도 싣지 않습니다. 대신 이 방에서 되는 요리는, 되는 방식 그대로 기록합니다. 가위로 자르고, 볼 하나로 섞고, 팬 하나로 끝내는 방식으로요.</p>
-        <p>신기한 일은 그다음에 일어났습니다. “저도 원룸인데 이건 되겠네요”라는 댓글이 달리기 시작했습니다. 팔로워 수보다 저장 수가 빠르게 늘었습니다. 누군가에게 원룸쿡은 구경하는 계정이 아니라 <b>‘오늘 저녁에 실행하는 계정’</b>이 되어가고 있었습니다.</p>
-        <p>원룸쿡이 증명하고 싶은 건 하나입니다. 좁은 주방은 요리를 포기할 이유가 아니라, 더 영리하게 요리할 이유라는 것. 여섯 평에서도 식탁은 근사할 수 있다는 것.</p>
+        <p>그 뒤로 규칙을 하나 세웠습니다. <b>"이 방에서 안 되는 요리는 올리지 않는다."</b> 화구가 두 개 필요한 레시피, 오븐이 커야 하는 베이킹, 조리대가 넓어야 하는 손질은 아무리 근사해도 싣지 않습니다. 대신 이 방에서 되는 요리는, 되는 방식 그대로 기록합니다.</p>
+        <p>신기한 일은 그다음에 일어났습니다. "저도 원룸인데 이건 되겠네요"라는 댓글이 달리기 시작했습니다. 팔로워 수보다 저장 수가 빠르게 늘었습니다. 누군가에게 원룸쿡은 구경하는 계정이 아니라 <b>'오늘 저녁에 실행하는 계정'</b>이 되어가고 있었습니다.</p>
+        <p>원룸쿡이 증명하고 싶은 건 하나입니다. 좁은 주방은 요리를 포기할 이유가 아니라, 더 영리하게 요리할 이유라는 것.</p>
       </div>
-    </section>
-
-    <section class="section-wash">
-      <div class="container">
-        <div class="section-head">
-          <p class="kicker">Principles</p>
-          <h2>원룸쿡의 세 가지 원칙</h2>
-        </div>
-        <div class="grid-3">
-          <div class="constraint reveal">
-            <span class="num">01</span>
-            <b>이 방에서 되는 것만</b>
-            <p class="muted small">1구 인덕션, 60cm 조리대, 미니 오븐. 이 조건에서 직접 만들어 성공한 레시피만 올립니다. 따라 했는데 안 되는 레시피는 원룸쿡에 없습니다.</p>
-          </div>
-          <div class="constraint reveal">
-            <span class="num">02</span>
-            <b>현실의 재료로</b>
-            <p class="muted small">한 번 쓰고 버리는 재료는 쓰지 않습니다. 생크림 대신 슬라이스 치즈, 칼 대신 가위. 자취방 냉장고의 현실을 기준으로 설계합니다.</p>
-          </div>
-          <div class="constraint reveal">
-            <span class="num">03</span>
-            <b>실패 지점까지 기록</b>
-            <p class="muted small">“여기서 태우기 쉽습니다”, “이 타이밍을 놓치면 붇습니다.” 성공 사진만이 아니라 실패하기 쉬운 지점을 함께 적습니다. 그게 진짜 레시피니까요.</p>
-          </div>
+    </div>
+    <section class="lx-section" style="background:var(--lx-coal);">
+      <div class="lx-container">
+        <p class="lx-label lx-reveal">Principles</p>
+        <h2 class="lx-h2 lx-reveal" data-delay="1">원룸쿡의 <span class="gold">세 가지 원칙</span></h2>
+        <div class="lx-grid-2" style="grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin-top:3rem;" id="principles">
+          <div class="lx-panel lx-reveal"><h3><span style="color:var(--lx-gold);font-family:var(--lx-serif);font-style:italic;">I.</span> 이 방에서 되는 것만</h3><p class="note" style="font-size:.88rem;">1구 인덕션, 60cm 조리대, 미니 오븐. 이 조건에서 직접 성공한 레시피만 올립니다. 따라 했는데 안 되는 레시피는 원룸쿡에 없습니다.</p></div>
+          <div class="lx-panel lx-reveal"><h3><span style="color:var(--lx-gold);font-family:var(--lx-serif);font-style:italic;">II.</span> 현실의 재료로</h3><p class="note" style="font-size:.88rem;">한 번 쓰고 버리는 재료는 쓰지 않습니다. 생크림 대신 슬라이스 치즈, 칼 대신 가위. 자취방 냉장고의 현실이 기준입니다.</p></div>
+          <div class="lx-panel lx-reveal"><h3><span style="color:var(--lx-gold);font-family:var(--lx-serif);font-style:italic;">III.</span> 실패 지점까지 기록</h3><p class="note" style="font-size:.88rem;">"여기서 태우기 쉽습니다." 성공 사진만이 아니라 실패하기 쉬운 지점을 함께 적습니다. 그게 진짜 레시피니까요.</p></div>
         </div>
       </div>
     </section>
-
-    <section>
-      <div class="narrow" style="text-align:center;">
-        <p class="kicker">What's Next</p>
-        <h2>다음 목표</h2>
-        <p class="muted" style="max-width:34em;margin-inline:auto;">더 많은 1인 가구의 식탁이 바뀌도록, 좋은 브랜드·동네 식당과의 협업을 준비하고 있습니다. 원룸쿡의 세계관과 맞는 파트너를 찾습니다.</p>
-        <div class="btn-row" style="justify-content:center;">
-          <a class="btn" href="partnership.html">파트너십 안내 보기</a>
-          <a class="btn btn-ghost" href="recipes/index.html">레시피 둘러보기</a>
-        </div>
+    <section class="lx-section lx-quote">
+      <blockquote class="lx-reveal">다음 목표는 더 많은 1인 가구의 식탁.<br><span class="gold">세계관이 맞는 파트너를 찾습니다.</span></blockquote>
+      <div class="hero-cta lx-reveal" data-delay="1">
+        <a class="btn-lux" href="partnership.html">Partnership</a>
+        <a class="btn-lux ghost" href="recipes/index.html">Full Menu</a>
       </div>
     </section>
   </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div>
-          <a class="brand" href="index.html" style="margin-bottom:1rem;">
-            <img src="assets/img/logo-mark.svg" alt="" width="30" height="30">
-            <span class="brand-name">원룸<em>쿡</em></span>
-          </a>
-          <p class="small" style="max-width:26em;">좁은 원룸, 최소한의 장비로 차린 근사한 한 끼. 1인 가구의 식탁을 바꾸는 레시피 미디어.</p>
-        </div>
-        <div>
-          <h4>Menu</h4>
-          <ul>
-            <li><a href="recipes/index.html">레시피 아카이브</a></li>
-            <li><a href="about.html">스토리</a></li>
-            <li><a href="partnership.html">파트너십 · 미디어킷</a></li>
-            <li><a href="contact.html">협업 문의</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Contact</h4>
-          <ul>
-            <li><a href="https://www.instagram.com/oneroomcook/" target="_blank" rel="noopener">Instagram @oneroomcook</a></li>
-            <li><a href="mailto:oneroomcook@gmail.com">oneroomcook@gmail.com</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <span>© 2026 ONEROOMCOOK. All rights reserved.</span>
-        <span>여섯 평에서도, 근사하게.</span>
-      </div>
-    </div>
+  <footer class="lx-footer">
+    <span class="lx-logo">ONEROOMCOOK</span>
+    <span>여섯 평에서도, 근사하게.</span>
+    <span>
+      <a href="https://www.instagram.com/oneroomcook/" target="_blank" rel="noopener">Instagram</a>
+      &nbsp;·&nbsp; <a href="mailto:oneroomcook@gmail.com">Email</a>
+      &nbsp;·&nbsp; © 2026 &nbsp;·&nbsp; <span style="opacity:.6">Photos: Unsplash</span>
+    </span>
   </footer>
-  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/luxe.js" defer></script>
 </body>
 </html>

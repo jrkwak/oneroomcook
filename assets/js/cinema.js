@@ -23,8 +23,8 @@
     var seg = 1 / n;
     acts.forEach(function (act, i) {
       var local = clamp((p - i * seg) / seg, 0, 1);   // 이 막 안에서의 진행도
-      var fadeIn = ease(clamp(local / 0.25, 0, 1));    // 앞 25%에서 등장
-      var fadeOut = i < n - 1 ? 1 - ease(clamp((local - 0.75) / 0.25, 0, 1)) : 1; // 뒤 25%에서 퇴장
+      var fadeIn = i === 0 ? 1 : ease(clamp(local / 0.35, 0, 1));   // 앞 35%에서 등장
+      var fadeOut = i < n - 1 ? 1 - ease(clamp((local - 0.65) / 0.35, 0, 1)) : 1; // 뒤 35%에서 퇴장
       var active = p >= i * seg && p < (i + 1) * seg || (i === n - 1 && p >= 1 - seg);
       act.style.opacity = (fadeIn * fadeOut).toFixed(3);
       act.style.zIndex = active ? 2 : 1;
@@ -33,7 +33,8 @@
       var cap = act.querySelector('.act-caption');
       if (cap) {
         cap.style.opacity = (fadeIn * fadeOut).toFixed(3);
-        cap.style.transform = 'translateY(' + ((1 - fadeIn) * 40) + 'px)';
+        // 캡션이 막 전체에 걸쳐 계속 떠오르도록 — 정지감 제거
+        cap.style.transform = 'translateY(' + (36 - local * 66) + 'px)';
       }
       if (dots[i]) dots[i].classList.toggle('on', active);
     });
