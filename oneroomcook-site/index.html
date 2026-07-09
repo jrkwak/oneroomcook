@@ -11,12 +11,13 @@
   <meta property="og:title" content="원룸쿡 — 여섯 평의 파인다이닝">
   <meta property="og:description" content="좁은 원룸, 최소한의 장비로 차린 미슐랭급 한 끼. ONE ROOM. ONE BURNER. ONE TABLE.">
   <meta property="og:url" content="https://jrkwak.github.io/oneroomcook/">
-  <meta property="og:image" content="https://jrkwak.github.io/oneroomcook/assets/img/og-cover.png">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1581340387417-e188200eb0f0?auto=format&fit=crop&w=1200&h=630&q=70">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="#0B0A09">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Noto+Serif+KR:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
   <link rel="stylesheet" href="assets/css/luxe.css">
@@ -44,7 +45,6 @@
   </script>
 </head>
 <body class="luxe">
-  <!-- 프리로더 -->
   <div class="preloader" aria-hidden="true">
     <div class="mono">
       <span style="animation-delay:.05s">O</span><span style="animation-delay:.1s">N</span><span style="animation-delay:.15s">E</span><span style="animation-delay:.2s">R</span><span style="animation-delay:.25s">O</span><span style="animation-delay:.3s">O</span><span style="animation-delay:.35s">M</span><span style="animation-delay:.4s">C</span><span style="animation-delay:.45s">O</span><span style="animation-delay:.5s">O</span><span style="animation-delay:.55s">K</span>
@@ -68,10 +68,11 @@
   </header>
 
   <main>
-    <!-- HERO -->
-    <section class="lx-hero">
-      <canvas id="steam-canvas" aria-hidden="true"></canvas>
-      <div class="hero-back" data-parallax="0.25" aria-hidden="true">ONEROOM</div>
+    <!-- HERO: 불쇼 -->
+    <section class="lx-hero photo-hero">
+      <img class="ph-img" src="https://images.unsplash.com/photo-1581340387417-e188200eb0f0?auto=format&fit=crop&w=2000&q=75"
+           alt="어두운 주방, 프라이팬 위로 치솟는 불꽃" fetchpriority="high">
+      <canvas id="steam-canvas" aria-hidden="true" style="z-index:1;"></canvas>
       <div class="hero-core">
         <p class="hero-eyebrow">One Room · One Burner · One Table</p>
         <h1 class="hero-title">여섯 평의<br><span class="gold">Fine Dining</span></h1>
@@ -84,7 +85,6 @@
       <div class="scroll-hint" aria-hidden="true"><span>Scroll</span><i></i></div>
     </section>
 
-    <!-- 마퀴 -->
     <div class="lx-marquee" aria-hidden="true">
       <div class="track">
         <span>Seoul <b>·</b> Six Pyeong <b>·</b> One Induction <b>·</b> 60cm Counter <b>·</b> Mini Oven <b>·</b> Est. 2025 <b>·</b></span>
@@ -92,29 +92,81 @@
       </div>
     </div>
 
+    <!-- 요리의 4막: 스크롤이 곧 조리 과정 -->
+    <section class="scrub" data-scrub="acts" style="height:480svh;" aria-label="스크롤로 진행되는 요리의 네 단계">
+      <div class="stage">
+        <div class="act">
+          <img src="https://images.unsplash.com/photo-1553025934-296397db4010?auto=format&fit=crop&w=1800&q=70" alt="도마 위에 손질된 재료들" loading="lazy">
+          <div class="act-caption">
+            <span class="act-no">Acte I — Mise en Place</span>
+            <h3>모든 요리는<br>육십 센티 위에서 시작됩니다</h3>
+            <p>도마 하나가 전부인 조리대. 그래서 재료 손질은 미니멀리즘이 됩니다. 볼 하나, 도마 하나, 가위 하나.</p>
+          </div>
+        </div>
+        <div class="act">
+          <img src="https://images.unsplash.com/photo-1625604086816-4bfaf603e842?auto=format&fit=crop&w=1800&q=70" alt="검은 팬 위에서 지글거리며 익는 고기" loading="lazy">
+          <div class="act-caption">
+            <span class="act-no">Acte II — Le Feu</span>
+            <h3>화구는 하나.<br>그래서 순서가 곧 요리입니다</h3>
+            <p>동시에 두 개를 올릴 수 없는 주방에서는, 조리 순서가 레시피의 절반입니다. 1구 인덕션의 시간표 위에서 설계된 불의 장.</p>
+          </div>
+        </div>
+        <div class="act">
+          <img src="https://images.unsplash.com/photo-1761416376088-d6456fcd76fd?auto=format&fit=crop&w=1800&q=70" alt="어둑한 주방에서 접시를 플레이팅하는 셰프의 손" loading="lazy">
+          <div class="act-caption">
+            <span class="act-no">Acte III — Dressage</span>
+            <h3>플레이팅은<br>공간이 아니라 태도입니다</h3>
+            <p>여섯 평 원룸의 식탁이라고 대충 담을 이유는 없습니다. 마지막 30초의 정성이 한 끼를 파인다이닝으로 만듭니다.</p>
+          </div>
+        </div>
+        <div class="act">
+          <img src="https://images.unsplash.com/photo-1556761223-4c4282c73f77?auto=format&fit=crop&w=1800&q=70" alt="어둠 속에서 포크로 들어올린 파스타" loading="lazy">
+          <div class="act-caption">
+            <span class="act-no">Acte IV — Service</span>
+            <h3>테이블은 하나.<br>오늘의 게스트는 나</h3>
+            <p>배달 앱을 닫고 차린 한 접시. 원룸쿡이 매주 증명하는 문장은 하나입니다 — 여섯 평에서도, 근사하게.</p>
+          </div>
+        </div>
+        <div class="scrub-progress" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i></div>
+      </div>
+    </section>
+
+    <!-- 회전 플레이트 -->
+    <section class="scrub" data-scrub="plate" style="height:260svh;" aria-label="스크롤에 따라 회전하는 시그니처 플레이트">
+      <div class="stage plate-stage">
+        <div class="plate-wrap">
+          <img src="https://images.unsplash.com/photo-1612929633738-8fe44f7ec841?auto=format&fit=crop&w=1400&h=1400&q=70" alt="검은 접시에 담긴 파스타를 위에서 내려다본 모습" loading="lazy">
+        </div>
+        <div class="plate-caption">
+          <h3>Signature — <span style="color:var(--lx-gold-l);font-style:italic;">원팬 크림파스타</span></h3>
+          <p>냄비 없이 팬 하나로. 생크림 대신 치즈 두 장으로. 설거지는 팬 하나.</p>
+        </div>
+      </div>
+    </section>
+
     <!-- 코스 메뉴 -->
-    <section class="lx-section">
+    <section class="lx-section after-scrub">
       <div class="lx-container">
         <p class="lx-label lx-reveal">Tasting Course</p>
         <h2 class="lx-h2 lx-reveal" data-delay="1">오늘 밤의 <span class="gold">코스</span></h2>
         <p class="lx-p lx-reveal" data-delay="2">가장 많이 저장된 접시들로 구성했습니다. 전 코스, 화구 하나에서 완성됩니다.</p>
         <div class="course-list lx-reveal" data-delay="2">
-          <a class="course" href="recipes/microwave-egg-jjim.html" data-img="assets/img/recipe-microwave-egg-jjim.svg">
+          <a class="course" href="recipes/microwave-egg-jjim.html" data-img="https://images.unsplash.com/photo-1587497539328-7e140d2ec8d1?auto=format&fit=crop&w=800&q=65">
             <span class="no">Nº 01<small>Amuse</small></span>
             <div><h3>폭탄계란찜</h3><p>불 없이 8분. 구름처럼 부풀어 오르는 시작.</p></div>
             <span class="go">→</span>
           </a>
-          <a class="course" href="recipes/butter-soy-egg-rice.html" data-img="assets/img/recipe-butter-soy-egg-rice.svg">
+          <a class="course" href="recipes/butter-soy-egg-rice.html" data-img="https://images.unsplash.com/photo-1550807014-1236e91b92d4?auto=format&fit=crop&w=800&q=65">
             <span class="no">Nº 02<small>Entrée</small></span>
             <div><h3>버터간장계란밥</h3><p>버터가 반쯤 녹는 30초 — 이 타이밍이 요리의 전부입니다.</p></div>
             <span class="go">→</span>
           </a>
-          <a class="course" href="recipes/one-pan-cream-pasta.html" data-img="assets/img/recipe-one-pan-cream-pasta.svg">
+          <a class="course" href="recipes/one-pan-cream-pasta.html" data-img="https://images.unsplash.com/photo-1612929633738-8fe44f7ec841?auto=format&fit=crop&w=800&q=65">
             <span class="no">Nº 03<small>Main</small></span>
             <div><h3>원팬 크림파스타</h3><p>냄비 없이 팬 하나로. 설거지마저 미니멀한 메인 디시.</p></div>
             <span class="go">→</span>
           </a>
-          <a class="course" href="recipes/mini-oven-basque.html" data-img="assets/img/recipe-mini-oven-basque.svg">
+          <a class="course" href="recipes/mini-oven-basque.html" data-img="https://images.unsplash.com/photo-1458253756247-1e4ed949191b?auto=format&fit=crop&w=800&q=65">
             <span class="no">Nº 04<small>Dessert</small></span>
             <div><h3>바스크 치즈케이크</h3><p>3만 원짜리 미니 오븐이 굽는, 일부러 태운 디저트.</p></div>
             <span class="go">→</span>
@@ -125,33 +177,6 @@
         </div>
       </div>
       <div class="course-thumb" aria-hidden="true"><img src="" alt=""></div>
-    </section>
-
-    <!-- 철학: 세 가지 리추얼 -->
-    <section class="lx-section ritual">
-      <div class="lx-container">
-        <p class="lx-label lx-reveal">The Discipline</p>
-        <h2 class="lx-h2 lx-reveal" data-delay="1">제약은 우리의 <span class="gold">레시피</span>입니다</h2>
-        <div class="ritual-grid" style="margin-top:3rem;">
-          <div class="ritual-sticky" aria-hidden="true">
-            <div class="ritual-num">6坪</div>
-          </div>
-          <div>
-            <div class="ritual-item lx-reveal">
-              <h3><span>I.</span>화구는 단 하나</h3>
-              <p>미슐랭 주방에 화구가 스무 개라면, 이곳엔 하나뿐입니다. 그래서 조리 순서가 곧 요리가 됩니다. 원룸쿡의 모든 레시피는 1구 인덕션의 시간표 위에서 설계됩니다.</p>
-            </div>
-            <div class="ritual-item lx-reveal">
-              <h3><span>II.</span>조리대 육십 센티</h3>
-              <p>도마 하나를 놓으면 끝나는 무대. 그래서 낭비되는 동선이 없습니다. 볼 하나, 도마 하나 — 미장플라스는 미니멀리즘이 됩니다.</p>
-            </div>
-            <div class="ritual-item lx-reveal">
-              <h3><span>III.</span>미니 오븐 한 대</h3>
-              <p>3만 원의 오븐이 굽는 바스크 치즈케이크. 장비의 가격이 아니라 온도와 시간의 이해가 맛을 만든다는 것을, 매주 증명합니다.</p>
-            </div>
-          </div>
-        </div>
-      </div>
     </section>
 
     <!-- 인용 -->
@@ -192,10 +217,11 @@
     <span>
       <a href="https://www.instagram.com/oneroomcook/" target="_blank" rel="noopener">Instagram</a>
       &nbsp;·&nbsp; <a href="mailto:oneroomcook@gmail.com">Email</a>
-      &nbsp;·&nbsp; © 2026
+      &nbsp;·&nbsp; © 2026 &nbsp;·&nbsp; <span style="opacity:.6">Photos: Unsplash</span>
     </span>
   </footer>
 
   <script src="assets/js/luxe.js" defer></script>
+  <script src="assets/js/cinema.js" defer></script>
 </body>
 </html>
