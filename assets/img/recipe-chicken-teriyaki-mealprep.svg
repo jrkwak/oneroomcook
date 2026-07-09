@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="데리야끼 치킨 밀프렙 4일치 일러스트">
+  <rect width="400" height="300" fill="#F4EBDB"/>
+  <circle cx="352" cy="46" r="60" fill="#C05A3A" opacity=".18"/>
+  <circle cx="40" cy="262" r="70" fill="#8F6B3E" opacity=".12"/>
+  <g transform="translate(0,14)"><rect x="110" y="140" width="180" height="80" rx="10" fill="#FFFDF8" stroke="#8F6B3E" stroke-width="5"/><line x1="200" y1="145" x2="200" y2="215" stroke="#8F6B3E" stroke-width="4"/><rect x="124" y="156" width="60" height="48" rx="6" fill="#C05A3A"/><circle cx="245" cy="168" r="12" fill="#7C8B6C"/><circle cx="264" cy="192" r="9" fill="#8F6B3E"/><rect x="110" y="126" width="180" height="16" rx="8" fill="#8F6B3E"/></g>
+  <rect x="20" y="252" width="86" height="26" rx="13" fill="#8F6B3E"/>
+  <text x="63" y="270" font-family="sans-serif" font-size="13" font-weight="700" fill="#FFFDF8" text-anchor="middle">밀프렙</text>
+</svg>

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" role="img" aria-label="인스타그램 게시물 플레이스홀더 3">
+  <rect width="300" height="300" fill="#EFE3D8"/>
+  <g transform="translate(-50,30) scale(.75)"><ellipse cx="200" cy="185" rx="120" ry="34" fill="#FFFDF8" stroke="#9A4326" stroke-width="5"/><path d="M140 178c20-22 44-30 62-24s26 20 52 16" fill="none" stroke="#C05A3A" stroke-width="14" stroke-linecap="round"/><circle cx="150" cy="170" r="7" fill="#D9A13F"/><circle cx="252" cy="172" r="6" fill="#D9A13F"/><path d="M185 138c-8 -12 8 -18 0 -32M215 138c-8 -12 8 -18 0 -32" fill="none" stroke="#D9A13F" stroke-width="6" stroke-linecap="round" opacity=".75"/></g>
+  <circle cx="258" cy="42" r="18" fill="none" stroke="#9A4326" stroke-width="4"/>
+  <circle cx="258" cy="42" r="7" fill="#9A4326"/>
+</svg>
