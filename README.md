@@ -5,7 +5,7 @@
 ## 무엇이 바뀌었나 (v1 → v2)
 
 - **깨진 스타일 근본 해결** — 기존 `luxe.css`가 CDN/브라우저에 구버전으로 캐시되어 내부 페이지(Story·Contact·레시피)가 반쯤 깨져 보였습니다. 파일명을 `site.css?v=2`로 교체해 캐시 문제를 원천 차단하고, 전 13개 페이지가 하나의 스타일시트를 공유합니다.
-- **3D 히어로** — 랜딩에서 스크롤하면 1구 인덕션 위 프라이팬이 재료를 토스하고 카메라가 와이드 → 팬 클로즈업으로 이동합니다 (three.js, 스크롤 = 화력). 모바일·저사양·모션 감소 설정·WebGL 미지원 환경은 사진 히어로로 자동 폴백.
+- **실사 영상 스크럽 히어로** — 랜딩에서 스크롤하면 실사 슬로모션 영상(소금을 뿌리는 셰프의 손 → 김이 오르는 팬)이 스크롤 위치에 맞춰 프레임 단위로 재생됩니다 (Apple 제품 페이지 방식). 모바일·저사양·영상 로드 실패 시 사진 히어로로 자동 폴백.
 - **사진 전면 교체** — 요리와 사진이 다르던 문제(크림파스타 페이지에 라면 사진 등)를 전부 실제 요리에 맞는 사진으로 교체.
 - **스크롤 하이재킹 제거** — 프리로더, 커스텀 커서, 필름 그레인, 고정 스크럽 섹션 제거. 페이지가 "멈춘 것처럼" 느껴지던 원인.
 - **Formspree 연동 완료** — 컨택 폼이 `xrewwnbv` 양식으로 실제 발송됩니다.
@@ -25,11 +25,8 @@
 - **레시피 추가**: `recipes/` 안의 아무 파일이나 복제해 내용을 바꾸고, `recipes/index.html`에 카드 하나, `sitemap.xml`에 URL 한 줄을 추가하면 됩니다.
 - **컨택 폼**: Formspree 대시보드(https://formspree.io)에서 수신 확인. 알림 이메일은 oneroomcook@gmail.com.
 - **인스타 피드**: Behold(https://behold.so) 대시보드에서 피드 관리. 피드 URL 변경 시 `index.html`의 `data-feed` 값만 교체.
-- **3D 히어로 튜닝**: `assets/js/hero3d.js`
-  - 카메라 동선: `KF` 배열 (스크롤 진행도 r별 위치/시선/화각)
-  - 토스 세기: `amp = 0.3 + r * 1.05`
-  - 토스 주기: `T = 2.4` (초)
-  - 섹션 길이(스크롤 분량): `site.css`의 `.hero3d.on { height: 380vh; }`
+- **히어로 영상 교체**: 새 영상을 `ffmpeg -i 원본.mp4 -vf scale=1440:-2 -an -c:v libx264 -preset slow -crf 23 -g 1 -pix_fmt yuv420p -movflags +faststart hero-scrub.mp4` 로 인코딩해 `assets/video/hero-scrub.mp4` 교체 (`-g 1` 전 프레임 키프레임이 핵심 — 스크럽이 부드러워지는 이유). 포스터는 `assets/img/hero-poster.jpg`.
+- **히어로 캡션/타이밍**: 캡션 문구는 `index.html`의 `.h3d-cap`, 등장 타이밍은 `assets/js/hero-scrub.js`의 `CAP_C` 배열, 스크롤 분량은 `site.css`의 `.hero3d.on { height: 380vh; }`
 
 ## 구조
 
@@ -42,7 +39,8 @@ contact.html          협업 문의 (Formspree)
 recipes/              레시피 아카이브 + 상세 8개 (Recipe JSON-LD)
 assets/css/site.css   전 페이지 공용 스타일
 assets/js/site.js     공용 인터랙션 (메뉴·리빌·카운트업·필터·인스타 피드)
-assets/js/hero3d.js   3D 히어로 (three.js CDN 모듈)
+assets/js/hero-scrub.js    실사 영상 스크럽 히어로
+assets/video/hero-scrub.mp4  히어로 영상 (전 프레임 키프레임 인코딩)
 assets/js/metrics-data.js  월간 지표 데이터
 sitemap.xml · robots.txt · favicon.svg
 ```

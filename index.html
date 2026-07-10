@@ -81,12 +81,15 @@
         </div>
       </div>
       <div class="hero3d-stage">
-        <canvas id="hero3d-canvas" aria-hidden="true"></canvas>
+        <video id="hero-scrub-video" muted playsinline preload="none"
+               src="assets/video/hero-scrub.mp4" poster="assets/img/hero-poster.jpg"
+               aria-hidden="true"></video>
+        <div class="stage-shade" aria-hidden="true"></div>
         <div class="hero3d-overlay">
           <div class="h3d-title">
             <p class="hero-eyebrow">One Room · One Burner · One Table</p>
             <h1 class="hero-h1" style="font-family:var(--kserif);font-weight:600;font-size:clamp(2.5rem,7vw,5.2rem);line-height:1.25;">여섯 평의<br><span class="gold" style="font-family:var(--serif);font-style:italic;">Fine Dining</span></h1>
-            <p class="hero-sub" style="margin-top:1.8rem;color:var(--muted);max-width:34em;">화구 하나. 조리대 육십 센티. 미니 오븐 한 대.<br>스크롤을 내리면, 불이 시작됩니다.</p>
+            <p class="hero-sub" style="margin-top:1.8rem;color:var(--muted);max-width:34em;">화구 하나. 조리대 육십 센티. 미니 오븐 한 대.<br>스크롤을 내리면, 요리가 시작됩니다.</p>
             <div class="cta-row">
               <a class="btn" href="recipes/index.html">Tonight's Menu</a>
               <a class="btn ghost" href="partnership.html">For Brands</a>
@@ -94,7 +97,7 @@
           </div>
           <div class="h3d-cap"><span class="act-no">Acte I — Mise en Place</span><h3>모든 요리는<br>육십 센티 위에서 시작됩니다</h3><p>도마 하나가 전부인 조리대. 그래서 재료 손질은 미니멀리즘이 됩니다.</p></div>
           <div class="h3d-cap"><span class="act-no">Acte II — Le Feu</span><h3>화구는 하나.<br>그래서 순서가 곧 요리입니다</h3><p>동시에 두 개를 올릴 수 없는 주방에서는, 조리 순서가 레시피의 절반입니다.</p></div>
-          <div class="h3d-cap"><span class="act-no">Acte III — Le Toss</span><h3>팬을 흔드는 손목이<br>여섯 평을 주방으로 만듭니다</h3><p>불이 세질수록 재료는 높이 뜁니다. 스크롤이 곧 화력입니다.</p></div>
+          <div class="h3d-cap"><span class="act-no">Acte III — L'Assaisonnement</span><h3>마지막 간은<br>손끝에서 결정됩니다</h3><p>소금 한 꼬집을 뿌리는 30cm의 높이 — 배달과 요리를 가르는 거리입니다.</p></div>
           <div class="h3d-cap"><span class="act-no">Acte IV — Service</span><h3>테이블은 하나.<br>오늘의 게스트는 나</h3><p>배달 앱을 닫고 차린 한 접시 — 여섯 평에서도, 근사하게.</p></div>
           <div class="h3d-hint"><span>Scroll</span><i></i></div>
         </div>
@@ -264,6 +267,6 @@
     </div>
   </footer>
   <script src="assets/js/site.js?v=2" defer></script>
-  <script type="module" src="assets/js/hero3d.js?v=2"></script>
+  <script src="assets/js/hero-scrub.js?v=2" defer></script>
 </body>
 </html>
