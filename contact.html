@@ -8,56 +8,53 @@
   <link rel="canonical" href="https://jrkwak.github.io/oneroomcook/contact.html">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="원룸쿡 ONEROOMCOOK">
-  <meta property="og:title" content="원룸쿡 협업 문의">
-  <meta property="og:description" content="브랜드 협찬, 레시피 개발, 식당 리뷰 협업 제안을 받습니다.">
+  <meta property="og:title" content="Contact — 원룸쿡 협업 문의 | ONEROOMCOOK">
+  <meta property="og:description" content="원룸쿡 협업·협찬 문의. 브랜드 협찬, 레시피 개발, 식당 리뷰 협업 제안을 받습니다. 2영업일 내 회신.">
   <meta property="og:url" content="https://jrkwak.github.io/oneroomcook/contact.html">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1581340387417-e188200eb0f0?auto=format&fit=crop&w=1200&q=70&h=630">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="#0B0A09">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Noto+Serif+KR:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
-  <link rel="stylesheet" href="assets/css/luxe.css">
+  <link rel="stylesheet" href="assets/css/site.css?v=2">
 </head>
-<body class="luxe">
-  <div class="grain" aria-hidden="true"></div>
-  <div class="cursor-dot" aria-hidden="true"></div>
-  <div class="cursor-ring" aria-hidden="true"></div>
-  <header class="lx-header solid">
-    <a class="lx-logo" href="index.html">ONEROOMCOOK</a>
-    <nav class="lx-nav" aria-label="주 메뉴">
+<body>
+  <a class="skip-link" href="#main">본문 바로가기</a>
+  <header class="site-header">
+    <a class="logo" href="index.html">ONEROOMCOOK</a>
+    <nav class="main-nav" aria-label="주 메뉴">
       <a href="recipes/index.html">Recipes</a>
       <a href="about.html">Story</a>
       <a href="partnership.html">Partnership</a>
       <a href="contact.html" aria-current="page">Contact</a>
     </nav>
-    <button class="lx-burger" aria-label="메뉴 열기" aria-expanded="false"><span></span><span></span><span></span></button>
+    <button class="burger" aria-label="메뉴 열기" aria-expanded="false"><span></span><span></span><span></span></button>
   </header>
-  <div class="lx-menu" aria-label="모바일 메뉴">
+  <nav class="mobile-menu" aria-label="모바일 메뉴">
     <a href="index.html">Home</a>
     <a href="recipes/index.html">Recipes</a>
     <a href="about.html">Story</a>
     <a href="partnership.html">Partnership</a>
-    <a href="contact.html">Contact</a>
-  </div>
-
-  <main>
-    <div class="lx-page-hero">
-      <p class="lx-label">Contact</p>
+    <a href="contact.html" aria-current="page">Contact</a>
+  </nav>
+  <main id="main">
+    <div class="page-hero">
+      <p class="label">Contact</p>
       <h1>협업 <span class="gold">문의</span></h1>
-      <p class="lx-p">브랜드 협찬, 레시피 개발, 식당 리뷰 — 어떤 형태든 좋습니다. 보내주시면 <b style="color:var(--lx-gold-l);">2영업일 내</b>에 회신드립니다.</p>
+      <p class="lede">브랜드 협찬, 레시피 개발, 식당 리뷰 — 어떤 형태든 좋습니다. 보내주시면 <b style="color:var(--gold-l);">2영업일 내</b>에 회신드립니다.</p>
     </div>
 
-    <div class="lx-section" style="padding-top:0;">
-      <div class="lx-container" style="max-width:820px;">
-        <!--
-          ★ Formspree 연동: https://formspree.io 가입 → New Form → 발급 ID로
-            아래 action의 YOUR_FORM_ID 교체 (README 5절 참고)
-        -->
-        <form class="lx-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+    <div class="section tight">
+      <div class="container" style="max-width:820px;">
+        <!-- Formspree 연동 완료 (양식 ID: xrewwnbv) -->
+        <form class="form" action="https://formspree.io/f/xrewwnbv" method="POST">
           <input type="hidden" name="_subject" value="[원룸쿡] 새 협업 문의">
           <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
-          <div class="lx-form-row">
+          <div class="form-row">
             <div>
               <label for="f-company">Company / Brand <span class="req">*</span></label>
               <input id="f-company" name="company" type="text" required autocomplete="organization" placeholder="회사 / 브랜드명">
@@ -67,7 +64,7 @@
               <input id="f-name" name="name" type="text" required autocomplete="name" placeholder="담당자 성함">
             </div>
           </div>
-          <div class="lx-form-row">
+          <div class="form-row">
             <div>
               <label for="f-email">Email <span class="req">*</span></label>
               <input id="f-email" name="email" type="email" required autocomplete="email" placeholder="name@company.com">
@@ -85,7 +82,7 @@
               </select>
             </div>
           </div>
-          <div class="lx-form-row">
+          <div class="form-row">
             <div>
               <label for="f-budget">Budget <span style="text-transform:none;letter-spacing:0;">(선택)</span></label>
               <select id="f-budget" name="budget">
@@ -105,33 +102,44 @@
             <label for="f-message">Message <span class="req">*</span></label>
             <textarea id="f-message" name="message" required placeholder="브랜드/제품 소개, 캠페인 목표, 참고 링크 등을 자유롭게 적어주세요."></textarea>
           </div>
-          <p class="lx-form-note">보내주신 정보는 협업 검토 목적 외에 사용하지 않습니다.</p>
-          <div><button class="btn-lux" type="submit">Send Inquiry</button></div>
+          <p class="form-note">보내주신 정보는 협업 검토 목적 외에 사용하지 않습니다.</p>
+          <div><button class="btn" type="submit">Send Inquiry</button></div>
         </form>
 
-        <div class="lx-grid-2" style="margin-top:4rem;">
-          <div class="lx-panel">
+        <div class="grid-2" style="margin-top:4rem;">
+          <div class="panel">
             <h3>Email Direct</h3>
-            <p class="note" style="font-size:.88rem;">제안서 파일이 있다면 이메일이 편합니다.<br><a href="mailto:oneroomcook@gmail.com" style="color:var(--lx-gold-l);">oneroomcook@gmail.com</a></p>
+            <p class="note">제안서 파일이 있다면 이메일이 편합니다.<br><a href="mailto:oneroomcook@gmail.com" style="color:var(--gold-l);">oneroomcook@gmail.com</a></p>
           </div>
-          <div class="lx-panel">
+          <div class="panel">
             <h3>Instagram DM</h3>
-            <p class="note" style="font-size:.88rem;">가벼운 문의는 DM도 환영합니다.<br><a href="https://www.instagram.com/oneroomcook/" target="_blank" rel="noopener" style="color:var(--lx-gold-l);">@oneroomcook</a></p>
+            <p class="note">가벼운 문의는 DM도 환영합니다.<br><a href="https://www.instagram.com/oneroomcook/" target="_blank" rel="noopener" style="color:var(--gold-l);">@oneroomcook</a></p>
           </div>
         </div>
       </div>
     </div>
   </main>
-
-  <footer class="lx-footer">
-    <span class="lx-logo">ONEROOMCOOK</span>
-    <span>여섯 평에서도, 근사하게.</span>
-    <span>
-      <a href="https://www.instagram.com/oneroomcook/" target="_blank" rel="noopener">Instagram</a>
-      &nbsp;·&nbsp; <a href="mailto:oneroomcook@gmail.com">Email</a>
-      &nbsp;·&nbsp; © 2026
-    </span>
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div>
+        <a class="logo" href="index.html">ONEROOMCOOK</a>
+        <p class="tagline">여섯 평에서도, 근사하게.</p>
+      </div>
+      <nav class="footer-nav" aria-label="푸터 메뉴">
+        <a href="recipes/index.html">Recipes</a>
+        <a href="about.html">Story</a>
+        <a href="partnership.html">Partnership</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+    <div class="footer-meta">
+      <span>© 2026 ONEROOMCOOK · Photos: Unsplash</span>
+      <span>
+        <a href="https://www.instagram.com/oneroomcook/" target="_blank" rel="noopener">Instagram</a>
+        &nbsp;·&nbsp; <a href="mailto:oneroomcook@gmail.com">oneroomcook@gmail.com</a>
+      </span>
+    </div>
   </footer>
-  <script src="assets/js/luxe.js" defer></script>
+  <script src="assets/js/site.js?v=2" defer></script>
 </body>
 </html>

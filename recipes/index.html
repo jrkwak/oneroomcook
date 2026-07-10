@@ -6,11 +6,12 @@
   <title>Full Menu — 원룸쿡 레시피 아카이브</title>
   <meta name="description" content="1구 인덕션과 60cm 조리대에서 완성한 원룸쿡의 전체 레시피. 한식·양식·야식·밀프렙 카테고리별로 골라보세요.">
   <link rel="canonical" href="https://jrkwak.github.io/oneroomcook/recipes/index.html">
-  <meta property="og:type" content="article">
+  <meta property="og:type" content="website">
   <meta property="og:site_name" content="원룸쿡 ONEROOMCOOK">
   <meta property="og:title" content="Full Menu — 원룸쿡 레시피 아카이브">
   <meta property="og:description" content="1구 인덕션과 60cm 조리대에서 완성한 원룸쿡의 전체 레시피. 한식·양식·야식·밀프렙 카테고리별로 골라보세요.">
   <meta property="og:url" content="https://jrkwak.github.io/oneroomcook/recipes/index.html">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1581340387417-e188200eb0f0?auto=format&fit=crop&w=1200&q=70&h=630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="#0B0A09">
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
@@ -19,7 +20,7 @@
   <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Noto+Serif+KR:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
-  <link rel="stylesheet" href="../assets/css/luxe.css">
+  <link rel="stylesheet" href="../assets/css/site.css?v=2">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -31,46 +32,44 @@
   }
   </script>
 </head>
-<body class="luxe">
-  <div class="grain" aria-hidden="true"></div>
-  <div class="cursor-dot" aria-hidden="true"></div>
-  <div class="cursor-ring" aria-hidden="true"></div>
-  <header class="lx-header solid">
-    <a class="lx-logo" href="../index.html">ONEROOMCOOK</a>
-    <nav class="lx-nav" aria-label="주 메뉴">
-      <a href="index.html">Recipes</a>
+<body>
+  <a class="skip-link" href="#main">본문 바로가기</a>
+  <header class="site-header">
+    <a class="logo" href="../index.html">ONEROOMCOOK</a>
+    <nav class="main-nav" aria-label="주 메뉴">
+      <a href="../recipes/index.html" aria-current="page">Recipes</a>
       <a href="../about.html">Story</a>
       <a href="../partnership.html">Partnership</a>
       <a href="../contact.html">Contact</a>
     </nav>
-    <button class="lx-burger" aria-label="메뉴 열기" aria-expanded="false"><span></span><span></span><span></span></button>
+    <button class="burger" aria-label="메뉴 열기" aria-expanded="false"><span></span><span></span><span></span></button>
   </header>
-  <div class="lx-menu" aria-label="모바일 메뉴">
+  <nav class="mobile-menu" aria-label="모바일 메뉴">
     <a href="../index.html">Home</a>
-    <a href="index.html">Recipes</a>
+    <a href="../recipes/index.html" aria-current="page">Recipes</a>
     <a href="../about.html">Story</a>
     <a href="../partnership.html">Partnership</a>
     <a href="../contact.html">Contact</a>
-  </div>
-  <main>
-    <div class="lx-page-hero">
-      <p class="lx-label">Full Menu</p>
+  </nav>
+  <main id="main">
+    <div class="page-hero">
+      <p class="label">Full Menu</p>
       <h1>레시피 <span class="gold">아카이브</span></h1>
-      <p class="lx-p">모든 접시는 1구 인덕션 · 조리대 60cm · 미니 오븐, 세 가지 제약 안에서 완성되었습니다.</p>
+      <p class="lede">모든 접시는 1구 인덕션 · 조리대 60cm · 미니 오븐, 세 가지 제약 안에서 완성되었습니다.</p>
     </div>
-    <div class="lx-section" style="padding-top:0;">
-      <div class="lx-container">
-        <div class="lx-filter filter-bar" role="group" aria-label="카테고리 필터">
+    <div class="section tight">
+      <div class="container">
+        <div class="filter-bar" role="group" aria-label="카테고리 필터">
           <button class="active" data-filter="all" aria-pressed="true">전체</button>
-          <button class="" data-filter="한식" aria-pressed="false">한식</button>
-          <button class="" data-filter="양식" aria-pressed="false">양식</button>
-          <button class="" data-filter="야식" aria-pressed="false">야식</button>
-          <button class="" data-filter="밀프렙" aria-pressed="false">밀프렙</button>
+          <button data-filter="한식" aria-pressed="false">한식</button>
+          <button data-filter="양식" aria-pressed="false">양식</button>
+          <button data-filter="야식" aria-pressed="false">야식</button>
+          <button data-filter="밀프렙" aria-pressed="false">밀프렙</button>
         </div>
-        <p class="lx-count archive-count">Nº of dishes — <b>8</b></p>
+        <p class="archive-count">Nº of dishes — <b>8</b></p>
         <div class="dish-grid">
-          <a class="dish-card recipe-card lx-reveal" href="butter-soy-egg-rice.html" data-categories="한식">
-            <div class="dc-media"><img src="https://images.unsplash.com/photo-1550807014-1236e91b92d4?auto=format&fit=crop&w=900&q=70" alt="10분 버터간장계란밥 다크 무드 사진" loading="lazy" width="900" height="675"></div>
+          <a class="dish-card" href="butter-soy-egg-rice.html" data-categories="한식">
+            <div class="dc-media"><img src="https://images.unsplash.com/photo-1516684732162-798a0062be99?auto=format&fit=crop&w=900&q=70" alt="검은 그릇에 소복하게 담긴 흰 쌀밥 위로 김이 오르는 어두운 무드의 사진" loading="lazy" width="900" height="675"></div>
             <div class="dc-body">
               <span class="dc-tag">한식</span>
               <h3>10분 버터간장계란밥</h3>
@@ -78,8 +77,8 @@
               <div class="dc-meta"><span>⏱ 10분</span><span>난이도 하</span><span>1구 인덕션</span></div>
             </div>
           </a>
-          <a class="dish-card recipe-card lx-reveal" href="one-pan-kimchi-jeyuk.html" data-categories="한식">
-            <div class="dc-media"><img src="https://images.unsplash.com/photo-1625604086816-4bfaf603e842?auto=format&fit=crop&w=900&q=70" alt="원팬 김치제육덮밥 다크 무드 사진" loading="lazy" width="900" height="675"></div>
+          <a class="dish-card" href="one-pan-kimchi-jeyuk.html" data-categories="한식">
+            <div class="dc-media"><img src="https://images.unsplash.com/photo-1625604086816-4bfaf603e842?auto=format&fit=crop&w=900&q=70" alt="검은 팬 위에서 붉은 양념의 고기가 지글거리며 익는 어두운 무드의 사진" loading="lazy" width="900" height="675"></div>
             <div class="dc-body">
               <span class="dc-tag">한식</span>
               <h3>원팬 김치제육덮밥</h3>
@@ -87,8 +86,8 @@
               <div class="dc-meta"><span>⏱ 20분</span><span>난이도 중</span><span>1구 인덕션</span></div>
             </div>
           </a>
-          <a class="dish-card recipe-card lx-reveal" href="one-pan-cream-pasta.html" data-categories="양식">
-            <div class="dc-media"><img src="https://images.unsplash.com/photo-1612929633738-8fe44f7ec841?auto=format&fit=crop&w=900&q=70" alt="원팬 크림파스타 다크 무드 사진" loading="lazy" width="900" height="675"></div>
+          <a class="dish-card" href="one-pan-cream-pasta.html" data-categories="양식">
+            <div class="dc-media"><img src="https://images.unsplash.com/photo-1645112411341-6c4fd023714a?auto=format&fit=crop&w=900&q=70" alt="러스틱한 접시에 담긴 크림소스 파스타의 어두운 무드 사진" loading="lazy" width="900" height="675"></div>
             <div class="dc-body">
               <span class="dc-tag">양식</span>
               <h3>원팬 크림파스타</h3>
@@ -96,17 +95,17 @@
               <div class="dc-meta"><span>⏱ 25분</span><span>난이도 하</span><span>1구 인덕션</span></div>
             </div>
           </a>
-          <a class="dish-card recipe-card lx-reveal" href="mini-oven-basque.html" data-categories="양식">
-            <div class="dc-media"><img src="https://images.unsplash.com/photo-1458253756247-1e4ed949191b?auto=format&fit=crop&w=900&q=70" alt="미니오븐 바스크 치즈케이크 다크 무드 사진" loading="lazy" width="900" height="675"></div>
+          <a class="dish-card" href="mini-oven-basque.html" data-categories="양식">
+            <div class="dc-media"><img src="https://images.unsplash.com/photo-1524351199678-941a58a3df50?auto=format&fit=crop&w=900&q=70" alt="검은 접시 위 치즈케이크 한 조각과 골드 포크가 놓인 어두운 무드의 사진" loading="lazy" width="900" height="675"></div>
             <div class="dc-body">
               <span class="dc-tag">양식 · 디저트</span>
               <h3>미니오븐 바스크 치즈케이크</h3>
               <p>3만 원짜리 미니 오븐으로 카페 디저트를. 반죽은 볼 하나, 거품기 하나.</p>
-              <div class="dc-meta"><span>⏱ 50분</span><span>난이도 중</span><span>미니 오븐(최대 230℃)</span></div>
+              <div class="dc-meta"><span>⏱ 50분</span><span>난이도 중</span><span>미니 오븐(230℃)</span></div>
             </div>
           </a>
-          <a class="dish-card recipe-card lx-reveal" href="microwave-egg-jjim.html" data-categories="야식 한식">
-            <div class="dc-media"><img src="https://images.unsplash.com/photo-1587497539328-7e140d2ec8d1?auto=format&fit=crop&w=900&q=70" alt="전자레인지 폭탄계란찜 다크 무드 사진" loading="lazy" width="900" height="675"></div>
+          <a class="dish-card" href="microwave-egg-jjim.html" data-categories="야식 한식">
+            <div class="dc-media"><img src="https://images.unsplash.com/photo-1482049016688-2d3e1b311543?auto=format&fit=crop&w=900&q=70" alt="어두운 접시 위 반으로 자른 부드러운 계란이 담긴 무드 사진" loading="lazy" width="900" height="675"></div>
             <div class="dc-body">
               <span class="dc-tag">야식</span>
               <h3>전자레인지 폭탄계란찜</h3>
@@ -114,8 +113,8 @@
               <div class="dc-meta"><span>⏱ 8분</span><span>난이도 하</span><span>전자레인지</span></div>
             </div>
           </a>
-          <a class="dish-card recipe-card lx-reveal" href="gukmul-tteokbokki.html" data-categories="야식">
-            <div class="dc-media"><img src="https://images.unsplash.com/photo-1553025934-296397db4010?auto=format&fit=crop&w=900&q=70" alt="새벽의 국물떡볶이 다크 무드 사진" loading="lazy" width="900" height="675"></div>
+          <a class="dish-card" href="gukmul-tteokbokki.html" data-categories="야식">
+            <div class="dc-media"><img src="https://images.unsplash.com/photo-1635363638580-c2809d049eee?auto=format&fit=crop&w=900&q=70" alt="검은 그릇에 담긴 빨간 국물떡볶이와 젓가락의 어두운 무드 사진" loading="lazy" width="900" height="675"></div>
             <div class="dc-body">
               <span class="dc-tag">야식</span>
               <h3>새벽의 국물떡볶이</h3>
@@ -123,8 +122,8 @@
               <div class="dc-meta"><span>⏱ 15분</span><span>난이도 하</span><span>1구 인덕션</span></div>
             </div>
           </a>
-          <a class="dish-card recipe-card lx-reveal" href="chicken-teriyaki-mealprep.html" data-categories="밀프렙">
-            <div class="dc-media"><img src="https://images.unsplash.com/photo-1761416376088-d6456fcd76fd?auto=format&fit=crop&w=900&q=70" alt="데리야끼 치킨 밀프렙 4일치 다크 무드 사진" loading="lazy" width="900" height="675"></div>
+          <a class="dish-card" href="chicken-teriyaki-mealprep.html" data-categories="밀프렙">
+            <div class="dc-media"><img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=900&q=70" alt="짙은 그릇에 담긴 윤기 나는 데리야끼 치킨의 어두운 무드 사진" loading="lazy" width="900" height="675"></div>
             <div class="dc-body">
               <span class="dc-tag">밀프렙</span>
               <h3>데리야끼 치킨 밀프렙 4일치</h3>
@@ -132,28 +131,40 @@
               <div class="dc-meta"><span>⏱ 40분</span><span>난이도 중</span><span>1구 인덕션</span></div>
             </div>
           </a>
-          <a class="dish-card recipe-card lx-reveal" href="overnight-oats.html" data-categories="밀프렙">
-            <div class="dc-media"><img src="https://images.unsplash.com/photo-1590064293071-c2610e23d86f?auto=format&fit=crop&w=900&q=70" alt="오버나이트 오츠 3가지 맛 다크 무드 사진" loading="lazy" width="900" height="675"></div>
+          <a class="dish-card" href="overnight-oats.html" data-categories="밀프렙">
+            <div class="dc-media"><img src="https://images.unsplash.com/photo-1571748982800-fa51082c2224?auto=format&fit=crop&w=900&q=70" alt="말린 과일과 견과를 올린 오트밀 볼과 유리병이 놓인 사진" loading="lazy" width="900" height="675"></div>
             <div class="dc-body">
               <span class="dc-tag">밀프렙</span>
               <h3>오버나이트 오츠 3가지 맛</h3>
               <p>자기 전 5분, 아침은 냉장고에서 꺼내기만. 불도 전자레인지도 필요 없습니다.</p>
-              <div class="dc-meta"><span>⏱ 10분(+하룻밤)</span><span>난이도 하</span><span>유리병(또는 밀폐용기) 3개</span></div>
+              <div class="dc-meta"><span>⏱ 10분+</span><span>난이도 하</span><span>유리병 3개</span></div>
             </div>
           </a>
         </div>
       </div>
     </div>
   </main>
-  <footer class="lx-footer">
-    <span class="lx-logo">ONEROOMCOOK</span>
-    <span>여섯 평에서도, 근사하게.</span>
-    <span>
-      <a href="https://www.instagram.com/oneroomcook/" target="_blank" rel="noopener">Instagram</a>
-      &nbsp;·&nbsp; <a href="mailto:oneroomcook@gmail.com">Email</a>
-      &nbsp;·&nbsp; © 2026 &nbsp;·&nbsp; <span style="opacity:.6">Photos: Unsplash</span>
-    </span>
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div>
+        <a class="logo" href="../index.html">ONEROOMCOOK</a>
+        <p class="tagline">여섯 평에서도, 근사하게.</p>
+      </div>
+      <nav class="footer-nav" aria-label="푸터 메뉴">
+        <a href="../recipes/index.html">Recipes</a>
+        <a href="../about.html">Story</a>
+        <a href="../partnership.html">Partnership</a>
+        <a href="../contact.html">Contact</a>
+      </nav>
+    </div>
+    <div class="footer-meta">
+      <span>© 2026 ONEROOMCOOK · Photos: Unsplash</span>
+      <span>
+        <a href="https://www.instagram.com/oneroomcook/" target="_blank" rel="noopener">Instagram</a>
+        &nbsp;·&nbsp; <a href="mailto:oneroomcook@gmail.com">oneroomcook@gmail.com</a>
+      </span>
+    </div>
   </footer>
-  <script src="../assets/js/luxe.js" defer></script>
+  <script src="../assets/js/site.js?v=2" defer></script>
 </body>
 </html>
