@@ -111,9 +111,9 @@ def recipe_page(i, r):
         "@type": "Recipe",
         "name": r["title"],
         "description": r["subtitle"],
-        "image": [img_url(r["photo"]), img_url(r["card"])],
+        "image": [img_url(r["photo"])] + ([img_url(r["card"])] if r.get("card") else []),
         "author": {"@type": "Organization", "name": "원룸쿡 ONEROOMCOOK", "url": f"{BASE_URL}/"},
-        "datePublished": TODAY,
+        "datePublished": r.get("date", TODAY),
         "prepTime": r["prep_iso"], "cookTime": r["cook_iso"], "totalTime": r["total_iso"],
         "recipeYield": r["servings"],
         "recipeCategory": r["category_label"],
@@ -121,7 +121,7 @@ def recipe_page(i, r):
         "keywords": r["keywords"],
         "recipeIngredient": [f"{x['name']} {x['amount']}" for x in r["ingredients"]],
         "recipeInstructions": [
-            {"@type": "HowToStep", "name": s["title"], "text": s["text"], "url": f"{url}#step-{n}"}
+            {"@type": "HowToStep", "name": s.get("title") or f"Step {n}", "text": s["text"], "url": f"{url}#step-{n}"}
             for n, s in enumerate(r["steps"], 1)
         ],
         "tool": [{"@type": "HowToTool", "name": t} for t in r["equipment"]],
@@ -129,9 +129,16 @@ def recipe_page(i, r):
     out = [head(f"{r['title']} — 원룸쿡", r["subtitle"], path, "article", img_url(r["photo"]), ld)]
     ings = "\n".join(f"              <li>{E(x['name'])}<span>{E(x['amount'])}</span></li>" for x in r["ingredients"])
     steps = "\n".join(
-        f'              <li id="step-{n}"><b>{E(s["title"])}</b><span>{E(s["text"])}</span></li>'
+        f'              <li id="step-{n}">' + (f'<b>{E(s["title"])}</b>' if s.get("title") else '') + f'<span>{E(s["text"])}</span></li>'
         for n, s in enumerate(r["steps"], 1))
-    tips = "".join(f"<p>{E(t)}</p>" for t in r["tips"])
+    tips = "".join(f"<p>{E(t)}</p>" for t in r.get("tips", []))
+    tips_html = f'<div class="rx-tip"><b>Chef\'s Note — 원룸 팁</b>{tips}</div>' if tips else ''
+    closing_html = f'<p class="rx-closing">{E(r["closing"])}</p>' if r.get("closing") else ''
+    card_html = (f'''<figure class="rx-card">
+          <img src="../assets/img/recipes/{r['card']}" alt="{E(r.get('card_alt', r['title'] + ' 레시피 카드'))}" loading="lazy">
+          <figcaption>Recipe Card — 한 장으로 보는 레시피</figcaption>
+        </figure>''' if r.get("card") else '')
+    intro_html = f'<p class="rx-intro">{E(r["intro"])}</p>' if r.get("intro") else ''
     prev_r = RECIPES[i - 1] if i > 0 else None
     next_r = RECIPES[i + 1] if i < len(RECIPES) - 1 else None
     nav = (f'<a href="{prev_r["slug"]}.html" rel="prev">← {E(prev_r["short"])}</a>' if prev_r else '<span></span>') + \
@@ -152,7 +159,7 @@ def recipe_page(i, r):
           <div><dt>Serves</dt><dd>{E(r['servings'])}</dd></div>
           <div><dt>Equipment</dt><dd>{E(r['equipment'][0])}</dd></div>
         </dl>
-        <p class="rx-intro">{E(r['intro'])}</p>
+        {intro_html}
         <div class="rx-layout">
           <aside class="rx-ing">
             <h2>Ingredients <small>({E(r['servings'])})</small></h2>
@@ -166,14 +173,11 @@ def recipe_page(i, r):
             <ol class="rx-steps">
 {steps}
             </ol>
-            <div class="rx-tip"><b>Chef's Note — 원룸 팁</b>{tips}</div>
-            <p class="rx-closing">{E(r['closing'])}</p>
+            {tips_html}
+            {closing_html}
           </div>
         </div>
-        <figure class="rx-card">
-          <img src="../assets/img/recipes/{r['card']}" alt="{E(r['card_alt'])}" loading="lazy" width="1600" height="900">
-          <figcaption>Recipe Card — 한 장으로 보는 레시피</figcaption>
-        </figure>
+        {card_html}
         <nav class="rx-nav" aria-label="레시피 이동">{nav}</nav>
       </div>
     </div>

@@ -1,0 +1,52 @@
+name: 네이버 블로그 레시피 동기화
+
+on:
+  schedule:
+    - cron: "17 */6 * * *"   # 6시간마다 (UTC 기준 00:17, 06:17, 12:17, 18:17)
+  workflow_dispatch: {}        # Actions 탭에서 'Run workflow'로 즉시 실행
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: sync-naver
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install beautifulsoup4 pillow
+
+      - name: Sync posts from blog.naver.com/oneroomcook
+        id: sync
+        run: |
+          python3 scripts/sync_naver.py | tee sync.log
+          if grep -q '^CHANGED$' sync.log; then echo "changed=true" >> "$GITHUB_OUTPUT"; fi
+
+      - name: Rebuild recipe pages
+        if: steps.sync.outputs.changed == 'true'
+        run: python3 scripts/build.py
+
+      - name: Commit and push
+        if: steps.sync.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/recipes.json recipes sitemap.xml assets/img/recipes
+          git commit -m "네이버 블로그 레시피 자동 동기화" -m "$(grep -E '^  [+~=] ' sync.log || true)"
+          git push
+
+      - name: Request GitHub Pages rebuild
+        if: steps.sync.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api -X POST "repos/${{ github.repository }}/pages/builds" || echo "Pages build request skipped"

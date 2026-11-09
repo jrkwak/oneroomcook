@@ -22,7 +22,8 @@
 ## 운영 가이드
 
 - **월간 지표 갱신**: `assets/js/metrics-data.js`의 숫자만 수정하면 파트너십 대시보드가 자동으로 다시 그려집니다. 홈/파트너십의 큰 수치 4개는 `index.html`·`partnership.html`에서 `data-count` 값과 표시 텍스트를 함께 수정하세요.
-- **레시피 추가**: 사진 2장(완성 사진 `<slug>.jpg`, 레시피 카드 `<slug>-card.jpg`)을 `assets/img/recipes/`에 넣고, `data/recipes.json`에 블로그 본문을 항목으로 추가한 뒤 `python3 scripts/build.py` 실행. 레시피 페이지·아카이브·sitemap이 자동 생성됨. 홈의 Signature·코스는 `index.html`에서 수동 수정.
+- **레시피 추가 (자동)**: 네이버 블로그(blog.naver.com/oneroomcook)에 글을 올리면 6시간 안에 사이트에 자동 반영됨 (`.github/workflows/sync-naver.yml` → `scripts/sync_naver.py`). 글에 "재료"와 "만드는 법" 제목 줄이 있어야 레시피로 인식되고, 첫 사진은 대표 사진, 두 번째 사진은 레시피 카드로 쓰임. 바로 반영하려면 GitHub → Actions → "네이버 블로그 레시피 동기화" → Run workflow.
+- **레시피 다듬기 (수동)**: `data/recipes.json`에서 부제·조리시간·난이도·도구·사진 설명을 고친 뒤 `python3 scripts/build.py`. 블로그 글이 수정돼도 이 항목들은 유지됨.
 - **컨택 폼**: Formspree 대시보드(https://formspree.io)에서 수신 확인. 알림 이메일은 oneroomcook@gmail.com.
 - **인스타 피드**: Behold(https://behold.so) 대시보드에서 피드 관리. 피드 URL 변경 시 `index.html`의 `data-feed` 값만 교체.
 - **히어로 영상 교체**: 새 영상을 `ffmpeg -i 원본.mp4 -vf scale=1440:-2 -an -c:v libx264 -preset slow -crf 23 -g 1 -pix_fmt yuv420p -movflags +faststart hero-scrub.mp4` 로 인코딩해 `assets/video/hero-scrub.mp4` 교체 (`-g 1` 전 프레임 키프레임이 핵심 — 스크럽이 부드러워지는 이유). 포스터는 `assets/img/hero-poster.jpg`.
