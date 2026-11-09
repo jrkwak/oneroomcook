@@ -63,8 +63,7 @@ def head(title, desc, path, og_type, og_image, ld):
     <nav class="main-nav" aria-label="주 메뉴">
       <a href="../recipes/index.html" aria-current="page">Recipes</a>
       <a href="../about.html">Story</a>
-      <a href="../partnership.html">Partnership</a>
-      <a href="../contact.html">Contact</a>
+      <a href="../contact.html">Contact Us</a>
     </nav>
     <button class="burger" aria-label="메뉴 열기" aria-expanded="false"><span></span><span></span><span></span></button>
   </header>
@@ -72,8 +71,7 @@ def head(title, desc, path, og_type, og_image, ld):
     <a href="../index.html">Home</a>
     <a href="../recipes/index.html" aria-current="page">Recipes</a>
     <a href="../about.html">Story</a>
-    <a href="../partnership.html">Partnership</a>
-    <a href="../contact.html">Contact</a>
+    <a href="../contact.html">Contact Us</a>
   </nav>
 '''
 
@@ -87,8 +85,7 @@ FOOTER = f'''  <footer class="site-footer">
       <nav class="footer-nav" aria-label="푸터 메뉴">
         <a href="../recipes/index.html">Recipes</a>
         <a href="../about.html">Story</a>
-        <a href="../partnership.html">Partnership</a>
-        <a href="../contact.html">Contact</a>
+        <a href="../contact.html">Contact Us</a>
       </nav>
     </div>
     <div class="footer-meta">
@@ -232,7 +229,7 @@ def archive_page():
 
 def sitemap():
     pages = ["", "recipes/index.html"] + [f"recipes/{r['slug']}.html" for r in RECIPES] + \
-            ["about.html", "partnership.html", "contact.html"]
+            ["about.html", "contact.html"]
     rows = "\n".join(f"  <url><loc>{BASE_URL}/{p}</loc><lastmod>{TODAY}</lastmod></url>" for p in pages)
     return f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{rows}\n</urlset>\n'
 
