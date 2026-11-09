@@ -13,7 +13,7 @@
 
 글 형식(블로그 본문 순서)
   인트로 문단 → '재료 (N인분)' → 재료 줄 → '만드는 법' → 단계 → '원룸 팁' → 팁 → '마무리' → 문단 → #해시태그
-  첫 번째 사진은 대표 사진, 두 번째 사진은 레시피 카드로 사용.
+  "AI 활용" 표시된 이미지를 대표 이미지로, 직접 찍은 사진은 페이지 하단에 사용 (AI 이미지가 없으면 첫 사진이 대표).
 
 실행
   python3 scripts/sync_naver.py            # 동기화
@@ -89,10 +89,11 @@ def blocks_from_html(doc):
     for c in comps:
         cls = " ".join(c.get("class", []))
         if "se-image" in cls or "se-imageStrip" in cls or "se-imageGroup" in cls:
+            is_ai = "AI 활용" in c.get_text(" ") or bool(c.select("[class*=ai], [class*=Ai], [class*=AI]"))
             for img in c.select("img"):
                 u = img.get("data-lazy-src") or img.get("src") or ""
                 if "pstatic" in u:
-                    out.append(("image", u))
+                    out.append(("ai_image" if is_ai else "image", u))
             continue
         if any(k in cls for k in ("se-oglink", "se-map", "se-placesMap", "se-video", "se-sticker", "se-horizontalLine", "se-documentTitle")):
             continue
@@ -138,7 +139,8 @@ def split_ingredient_line(line):
 def parse_post(doc, title_hint=""):
     blocks = blocks_from_html(doc)
     texts = [t for k, t in blocks if k == "text"]
-    images = [u for k, u in blocks if k == "image"]
+    ai_images = [u for k, u in blocks if k == "ai_image"]
+    real_images = [u for k, u in blocks if k == "image"]
     title = title_hint
     sec, servings = "intro", "1인분"
     buckets = {"intro": [], "ingredients": [], "steps": [], "tips": [], "closing": []}
@@ -176,7 +178,10 @@ def parse_post(doc, title_hint=""):
         "tips": tips,
         "closing": " ".join(buckets["closing"]),
         "hashtags": hashtags,
-        "images": images,
+        # 대표 이미지는 AI 이미지 우선, 두 번째 이미지는 직접 찍은 사진 우선
+        "images": (ai_images[:1] + real_images[:1] + ai_images[1:] + real_images[1:]) if ai_images
+                  else real_images,
+        "has_ai": bool(ai_images),
     }
 
 
@@ -298,7 +303,11 @@ def sync():
             "naver_logno": no, "naver_hash": h, "source": "naver",
         }
         if card:
-            entry.update({"card": card, "card_alt": f"{it['title']} 레시피 카드"})
+            entry.update({"card": card, "card_alt": f"{it['title']} 사진"})
+            if p["has_ai"]:
+                entry.update({"card_caption": "Photo — 직접 만든 한 접시", "card_is_photo": True})
+        if p["has_ai"]:
+            entry["photo_alt"] = f"{it['title']} 재료와 완성 접시를 담은 대표 이미지"
         new_entries.append(entry)
         changed = True
         print(f"  + {no} {it['title']} (새 레시피 추가)")

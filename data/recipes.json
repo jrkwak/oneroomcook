@@ -19,10 +19,10 @@
       "1구 인덕션",
       "프라이팬 1개"
     ],
-    "photo": "lobster-roll.jpg",
-    "photo_alt": "버터에 구운 빵에 랍스터 샐러드를 가득 채우고 쪽파를 뿌린 랍스터 롤 두 개",
-    "card": "lobster-roll-card.jpg",
-    "card_alt": "랍스터 롤 재료 — 브리오슈, 랍스터 살, 셀러리, 쪽파, 마요네즈, 레몬, 소금·후추, 파프리카 가루 — 를 정리한 레시피 카드",
+    "photo": "lobster-roll-card.jpg",
+    "photo_alt": "랍스터 롤 재료 — 브리오슈, 랍스터 살, 셀러리, 쪽파, 마요네즈, 레몬, 소금·후추, 파프리카 가루 — 를 정리한 레시피 카드",
+    "card": "lobster-roll.jpg",
+    "card_alt": "버터에 구운 빵에 랍스터 샐러드를 가득 채우고 쪽파를 뿌린 랍스터 롤 두 개",
     "keywords": "랍스터롤, 랍스터요리, 브런치메뉴, 식빵요리, 샌드위치만들기, 홈브런치, 자취요리, 원룸요리",
     "ingredients": [
       {
@@ -80,7 +80,9 @@
       "빵은 꼭 먹기 직전에 구워야 해요. 따뜻한 버터 빵과 차가운 속의 온도 차이가 이 메뉴의 포인트예요.",
       "셀러리가 없으면 오이로 대신해도 아삭한 식감을 낼 수 있어요."
     ],
-    "closing": "재료는 단순한데 접시에 올리면 브런치 카페 메뉴 같은 비주얼이 나와요. 주말 늦은 아침이나 손님 접대용 핑거푸드로 추천해요."
+    "closing": "재료는 단순한데 접시에 올리면 브런치 카페 메뉴 같은 비주얼이 나와요. 주말 늦은 아침이나 손님 접대용 핑거푸드로 추천해요.",
+    "card_caption": "Photo — 직접 만든 한 접시",
+    "card_is_photo": true
   },
   {
     "slug": "soba-natto-yolk",
@@ -102,10 +104,10 @@
       "1구 인덕션",
       "냄비 1개"
     ],
-    "photo": "soba-natto.jpg",
-    "photo_alt": "메밀면 한 그릇과 얼음 띄운 쯔유, 노른자를 올린 낫또 한 팩이 놓인 식탁",
-    "card": "soba-natto-card.jpg",
-    "card_alt": "낫또 소바 재료 — 김, 쪽파, 노른자, 낫또, 메밀면, 와사비, 얼음, 쯔유 — 를 정리한 레시피 카드",
+    "photo": "soba-natto-card.jpg",
+    "photo_alt": "낫또 소바 재료 — 김, 쪽파, 노른자, 낫또, 메밀면, 와사비, 얼음, 쯔유 — 를 정리한 레시피 카드",
+    "card": "soba-natto.jpg",
+    "card_alt": "메밀면 한 그릇과 얼음 띄운 쯔유, 노른자를 올린 낫또 한 팩이 놓인 식탁",
     "keywords": "메밀소바, 냉모밀, 소바만들기, 쯔유비율, 낫또먹는법, 여름음식, 자취요리, 원룸요리",
     "ingredients": [
       {
@@ -169,7 +171,9 @@
     ],
     "closing": "4분이면 끝나는 요리지만 그릇 두 개만 정갈하게 담아도 일식집 정식 같은 느낌이 나요. 건강하게 가볍게 먹고 싶은 날 꼭 해보세요.",
     "naver_logno": "224470275817",
-    "naver_hash": "23065f6f5ddd"
+    "naver_hash": "23065f6f5ddd",
+    "card_caption": "Photo — 직접 만든 한 접시",
+    "card_is_photo": true
   },
   {
     "slug": "barley-mushroom-risotto",
@@ -192,10 +196,10 @@
       "냄비 1개",
       "프라이팬 1개"
     ],
-    "photo": "barley-risotto.jpg",
-    "photo_alt": "검은 무쇠 팬에 담긴 보리 리조또 위에 구운 새우와 바삭한 토핑, 허브를 올린 사진",
-    "card": "barley-risotto-card.jpg",
-    "card_alt": "보리 리조또 재료와 만드는 법 6단계를 정리한 레시피 카드",
+    "photo": "barley-risotto-card.jpg",
+    "photo_alt": "보리 리조또 재료와 만드는 법 6단계를 정리한 레시피 카드",
+    "card": "barley-risotto.jpg",
+    "card_alt": "검은 무쇠 팬에 담긴 보리 리조또 위에 구운 새우와 바삭한 토핑, 허브를 올린 사진",
     "keywords": "보리리조또, 버섯리조또, 트러플리조또, 자취요리, 원룸요리",
     "ingredients": [
       {
@@ -279,7 +283,9 @@
     ],
     "closing": "같은 리조또라도 곡물 하나 바꾸니 완전히 다른 요리가 됐어요. 보리 특유의 고소함이 버섯, 트러플과 잘 어울려서 손님 초대 메뉴로도 추천해요.",
     "naver_logno": "224469939292",
-    "naver_hash": "25ebc6b6bc1c"
+    "naver_hash": "25ebc6b6bc1c",
+    "card_caption": "Photo — 직접 만든 한 접시",
+    "card_is_photo": true
   },
   {
     "slug": "chicken-thigh-donburi",
@@ -301,10 +307,10 @@
       "1구 인덕션",
       "프라이팬 1개"
     ],
-    "photo": "chicken-donburi.jpg",
-    "photo_alt": "흰 그릇에 담긴 바삭하게 구운 닭다리살 덮밥과 쪽파, 곁들인 오이무침과 나무 수저",
-    "card": "chicken-donburi-card.jpg",
-    "card_alt": "닭다리살 덮밥 재료와 소스 배합을 정리한 레시피 카드",
+    "photo": "chicken-donburi-card.jpg",
+    "photo_alt": "닭다리살 덮밥 재료와 소스 배합을 정리한 레시피 카드",
+    "card": "chicken-donburi.jpg",
+    "card_alt": "흰 그릇에 담긴 바삭하게 구운 닭다리살 덮밥과 쪽파, 곁들인 오이무침과 나무 수저",
     "keywords": "닭다리살덮밥, 덮밥레시피, 데리야끼, 자취요리, 원룸요리",
     "ingredients": [
       {
@@ -380,7 +386,9 @@
     ],
     "closing": "익숙한 데리야끼 맛이지만, 껍질을 끝까지 굽는 것 하나로 식감이 완전히 달라져요. 처음엔 7분이 길게 느껴지는데, 그 시간을 참는 게 이 덮밥의 전부예요.",
     "naver_logno": "224469472765",
-    "naver_hash": "5f10df78278d"
+    "naver_hash": "5f10df78278d",
+    "card_caption": "Photo — 직접 만든 한 접시",
+    "card_is_photo": true
   },
   {
     "slug": "leftover-hoe-deopbap",
@@ -403,10 +411,10 @@
       "볼 1개",
       "덮밥 그릇 1개"
     ],
-    "photo": "hoe-deopbap.jpg",
-    "photo_alt": "속초 회센터의 모둠회 한 접시 — 광어, 우럭, 참돔 회가 파슬리 장식과 함께 담긴 사진",
-    "card": "hoe-deopbap-card.jpg",
-    "card_alt": "회덮밥 재료와 초장 배합을 정리한 레시피 카드",
+    "photo": "hoe-deopbap-card.jpg",
+    "photo_alt": "회덮밥 재료와 초장 배합을 정리한 레시피 카드",
+    "card": "hoe-deopbap.jpg",
+    "card_alt": "속초 회센터의 모둠회 한 접시 — 광어, 우럭, 참돔 회가 파슬리 장식과 함께 담긴 사진",
     "keywords": "회덮밥, 초장만들기, 속초여행, 속초회, 남은회활용, 자취요리",
     "ingredients": [
       {
@@ -480,6 +488,8 @@
       "남은 회는 랩으로 공기를 차단해 냉장고 가장 안쪽에 두고, 다음 날 안에 먹는 게 좋아요.",
       "밥이 뜨거우면 회가 익어버리니 꼭 한 김 식혀서 쓰세요."
     ],
-    "closing": "바닷가에서 먹은 회도 좋았지만, 집에 와서 다시 한 그릇으로 즐기니 여행이 하루 더 늘어난 기분이었어요. 회가 남았을 때 버리지 말고 꼭 덮밥으로 만들어 보세요."
+    "closing": "바닷가에서 먹은 회도 좋았지만, 집에 와서 다시 한 그릇으로 즐기니 여행이 하루 더 늘어난 기분이었어요. 회가 남았을 때 버리지 말고 꼭 덮밥으로 만들어 보세요.",
+    "card_caption": "Photo — 직접 만든 한 접시",
+    "card_is_photo": true
   }
 ]

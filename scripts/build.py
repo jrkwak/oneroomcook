@@ -136,7 +136,7 @@ def recipe_page(i, r):
     closing_html = f'<p class="rx-closing">{E(r["closing"])}</p>' if r.get("closing") else ''
     card_html = (f'''<figure class="rx-card">
           <img src="../assets/img/recipes/{r['card']}" alt="{E(r.get('card_alt', r['title'] + ' 레시피 카드'))}" loading="lazy">
-          <figcaption>Recipe Card — 한 장으로 보는 레시피</figcaption>
+          <figcaption>{E(r.get('card_caption', 'Recipe Card — 한 장으로 보는 레시피'))}</figcaption>
         </figure>''' if r.get("card") else '')
     intro_html = f'<p class="rx-intro">{E(r["intro"])}</p>' if r.get("intro") else ''
     prev_r = RECIPES[i - 1] if i > 0 else None
