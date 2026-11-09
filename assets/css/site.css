@@ -526,3 +526,13 @@ h2.title { font-family: var(--kserif); font-weight: 600; font-size: clamp(1.8rem
   .page-hero { padding-top: 1rem; }
   .rx-hero-img { max-height: 30vh; }
 }
+
+/* ---- v3: 블로그 레시피 (인트로 · 레시피 카드 · 마무리) ---- */
+.rx-intro { max-width: 46em; margin: 0 auto 2.6rem; color: var(--ivory); font-size: 1.02rem; line-height: 1.95; }
+.rx-hero-img.square { max-height: 72vh; object-position: center; }
+.rx-tip p + p { margin-top: .7rem; }
+.rx-card { margin: 3.4rem 0 0; }
+.rx-card img { width: 100%; height: auto; border: 1px solid var(--line); }
+.rx-card figcaption { margin-top: .8rem; color: var(--muted); font-size: .62rem; letter-spacing: .28em; text-transform: uppercase; }
+.rx-closing { margin-top: 2.6rem; font-family: var(--kserif); color: var(--gold-l); font-size: 1.05rem; line-height: 1.9; }
+@media print { .rx-card { display: none; } .rx-intro, .rx-closing { color: #333; } }
